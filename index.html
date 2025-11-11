@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VERCE - Create legally binding consent agreements with comprehensive evidence generation. Verify consent for meetings, events, and activities.">
+    <meta name="theme-color" content="#6b7280">
+    <title>VERCE - Verify Consent, Create Evidence</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../public/vlogo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <img src="../public/vlogo.png" alt="VERCE logo" class="logo-img" onerror="this.style.display='none'">
+                    <span class="logo-text">VERCE</span>
+                </div>
+                <div class="nav-links"></div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Slim, Brand-forward) -->
+    <section class="hero hero--compact">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-watermark">
+                    <img src="../public/vlogo.png" alt="VERCE watermark" onerror="this.style.display='none'">
+                </div>
+                <h1 class="hero-title">The future of digital consent is coming into view.</h1>
+                <p class="hero-description lead">Something transparent is brewing. We're building a new standard for trust and verification online. Launching <span id="launchDate"></span>.</p>
+
+                <!-- Central Visual: Verification badge animation (indicates trust/verification) -->
+                <div class="verification-visual" role="img" aria-label="Verification badge coming into view">
+                    <svg class="verification-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <!-- Outer subtle ring -->
+                        <circle cx="100" cy="100" r="85" fill="none" stroke="var(--gray-200)" stroke-width="2"/>
+                        <!-- Scanning ring -->
+                        <circle class="scan-ring" cx="100" cy="100" r="70" fill="none" stroke="var(--gray-400)" stroke-width="3" stroke-linecap="round" stroke-dasharray="35 22"/>
+                        <!-- Badge circle -->
+                        <circle cx="100" cy="100" r="52" fill="url(#badgeGrad)" stroke="var(--gray-300)" stroke-width="2"/>
+                        <!-- Check mark path draws in -->
+                        <path class="checkmark" d="M80 102 L95 118 L122 88" fill="none" stroke="var(--gray-700)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                        <!-- Accent notch (lock hint) -->
+                        <rect x="94" y="58" width="12" height="14" rx="3" fill="var(--gray-300)" opacity="0.7"/>
+                        <defs>
+                            <linearGradient id="badgeGrad" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="var(--gray-100)"/>
+                                <stop offset="100%" stop-color="var(--gray-50)"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <div class="verification-caption">Identity verified. Consent protected. Evidence ready.</div>
+                </div>
+
+                <!-- Countdown -->
+                <div class="countdown" role="timer" aria-live="polite">
+                    <div class="countdown-seg">
+                        <div class="countdown-num" id="cdDays">15</div>
+                        <div class="countdown-label">Days</div>
+                    </div>
+                    <div class="countdown-seg">
+                        <div class="countdown-num" id="cdHours">00</div>
+                        <div class="countdown-label">Hours</div>
+                    </div>
+                    <div class="countdown-seg">
+                        <div class="countdown-num" id="cdMinutes">00</div>
+                        <div class="countdown-label">Minutes</div>
+                    </div>
+                    <div class="countdown-seg">
+                        <div class="countdown-num" id="cdSeconds">00</div>
+                        <div class="countdown-label">Seconds</div>
+                    </div>
+                </div>
+                <div class="countdown-note">Be the first to know when we're live</div>
+
+                <!-- Email Capture -->
+                <form class="comingsoon-form" id="comingSoonForm">
+                    <input type="email" id="comingSoonEmail" class="comingsoon-input" placeholder="Enter your email to get a front-row seat" required>
+                    <button type="submit" class="btn-primary">Notify Me</button>
+                </form>
+                <div class="privacy-note">We respect your privacy. No spam, just one clear notification.</div>
+
+                <!-- Social proof -->
+                <div class="social-proof">
+                    <div class="pulse-dots" aria-hidden="true">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <p>Join forward‑thinking teams already waiting.</p>
+                </div>
+
+                <!-- Loading line -->
+                <div class="loading-subtle">
+                    <span class="loading-dots"></span>
+                    <span>Verifying the future of consent</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-minimal">
+                <div class="footer-brand-center">
+                    <img src="../public/vlogo.png" alt="VERCE logo" class="logo-img" onerror="this.style.display='none'">
+                    <span class="logo-text">VERCE</span>
+                </div>
+                <p class="footer-tagline">Verify Consent, Create Evidence</p>
+                <p class="footer-copy">&copy; 2025 VERCE</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification Modal -->
+    <div class="modal" id="notifyModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <div class="modal-icon">✉️</div>
+            <h3 class="modal-title">Get Notified</h3>
+            <p class="modal-description">
+                Enter your email to be notified when VERCE launches
+            </p>
+            <form class="modal-form" id="modalNotifyForm">
+                <input 
+                    type="email" 
+                    placeholder="your@email.com" 
+                    required
+                    class="modal-input"
+                    id="modalEmailInput"
+                >
+                <button type="submit" class="btn-primary">Notify Me</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <span class="toast-icon">✓</span>
+            <span class="toast-message" id="toastMessage">Thank you! We'll notify you soon.</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
